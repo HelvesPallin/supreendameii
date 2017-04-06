@@ -23,7 +23,7 @@ public class ProductRepository{
 	}
 	
 	@Transactional
-	public void alterProduct(Product product){
+	public void editProduct(Product product){
 		entityManager.merge(product);
 	}
 	

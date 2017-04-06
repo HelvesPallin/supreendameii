@@ -3,11 +3,13 @@ package com.neppo.surpreendameii.service.serviceImpl;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import com.neppo.surpreendameii.model.Product;
 import com.neppo.surpreendameii.repository.ProductRepository;
 import com.neppo.surpreendameii.service.ProductService;
 
+@Service
 public class ProductServiceImpl implements ProductService{
 	
 	private ProductRepository productRepository;
@@ -28,8 +30,8 @@ public class ProductServiceImpl implements ProductService{
 	}
 	
 	@Override
-	public void alterProduct(Product product){
-		productRepository.alterProduct(product);
+	public void editProduct(Product product){
+		productRepository.editProduct(product);
 	}
 	
 	@Override

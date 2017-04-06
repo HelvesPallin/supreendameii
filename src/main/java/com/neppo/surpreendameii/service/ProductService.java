@@ -10,7 +10,7 @@ public interface ProductService {
 	
 	public void deleteProduct(int product_id);
 	
-	public void alterProduct(Product product);
+	public void editProduct(Product product);
 	
 	public Product findOne(int product_id);
 	
