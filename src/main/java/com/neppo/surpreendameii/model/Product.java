@@ -10,7 +10,7 @@ import javax.persistence.Table;
 import org.hibernate.validator.constraints.NotEmpty;
 
 @Entity
-@Table(name = "ProductModel")
+@Table(name = "products_table")
 public class Product {
 
 	@Id
@@ -24,7 +24,7 @@ public class Product {
 	
 	@NotEmpty
 	@Column(name = "product_patrimony")
-	private int product_patrimony;
+	private String product_patrimony;
 	
 	@Column(name = "product_desc")
 	private String product_desc;
@@ -45,11 +45,11 @@ public class Product {
 		this.product_name = product_name;
 	}
 
-	public int getProduct_patrimony() {
+	public String getProduct_patrimony() {
 		return product_patrimony;
 	}
 
-	public void setProduct_patrimony(int product_patrimony) {
+	public void setProduct_patrimony(String product_patrimony) {
 		this.product_patrimony = product_patrimony;
 	}
 
