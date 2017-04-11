@@ -43,7 +43,7 @@ public class ProdutcController {
 		try{
 			productService.editProduct(product);
 			result.setCode(1);
-			result.setMessage("Product Saved!");
+			result.setMessage("Product Edited!");
 		}
 		catch(Exception e){
 			result.setCode(0);
@@ -52,7 +52,12 @@ public class ProdutcController {
 		return result;
 	}
 	
-	@RequestMapping(value = "/delete/{product_id}", method = RequestMethod.GET)
+	@RequestMapping(value = "/edit/{product_id}", method = RequestMethod.GET)
+	public @ResponseBody Product getProduct(@PathVariable int product_id){
+		return productService.findOne(product_id);
+	}
+	
+	@RequestMapping(value = "/delete/{product_id}", method = RequestMethod.DELETE)
 	public @ResponseBody void deleteProduct(@PathVariable int product_id){
 		productService.deleteProduct(product_id);
 	}
